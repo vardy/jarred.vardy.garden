@@ -1,0 +1,32 @@
+---
+const footerItems = [
+    ["GitHub", "https://github.com/vardy/"],
+    ["jarred.vardy@gmail.com"]
+];
+---
+
+<div>
+    <div id="footer-nav-links">
+        {footerItems.map((itemPair, idx) => {
+            if (idx + 1 != footerItems.length) {
+                return <span><a href={itemPair[1]}>{itemPair[0]}</a> • </span>;
+            } else {
+                return <span><a href={itemPair[1]}>{itemPair[0]}</a></span>;
+            }
+        })}
+    </div>
+</div>
+
+<style>
+    #footer-nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent-color);
+    }
+
+    span {
+        white-space: pre;
+    }
+</style>

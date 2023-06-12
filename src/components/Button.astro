@@ -1,0 +1,19 @@
+---
+let { link } = Astro.props;
+---
+
+<div class="btn">
+    <a href={link}>
+        <slot></slot>
+    </a>
+</div>
+
+<style>
+    .btn a {
+        text-decoration: none;
+        font-style: normal;
+        padding: 0.3rem 0.5rem;
+        background-color: var(--accent-color);
+        color: white;
+    }
+</style>

@@ -1,0 +1,30 @@
+---
+import MasterLayout from "./MasterLayout.astro";
+
+let { frontmatter } = Astro.props;
+const jv = " | Jarred Vardy"
+let title = frontmatter?.title ? frontmatter.title + jv  : "Blog Post" + jv
+---
+
+<MasterLayout {title} >
+    <div>
+        <a href="/writing/blog"><span>&larr; Blog Home</span></a>
+    </div>
+    <div class="writing-content">
+        <slot />
+    </div>
+</MasterLayout>
+
+<style is:inline>
+    .writing-content p:first-of-type {
+        min-height: 60px;
+    }
+
+    .writing-content p:first-of-type:first-letter {
+          color: var(--fire-engine-red);
+          font-family: var(--drop-caps-font);
+          float: left;
+          font-size: 4em;
+          padding-right: 8px;
+    }
+</style>
