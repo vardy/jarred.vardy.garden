@@ -1,1 +1,3 @@
-# jarredvardy.com
+# jarred.vardy.garden
+
+https://jarred.vardy.garden/
