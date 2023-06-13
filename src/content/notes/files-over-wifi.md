@@ -1,6 +1,7 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
+draft: false
 title: Files Over Wifi
+date: 2023-06-10
 ---
 
 # Transfering Files Between Laptops Over Wifi

@@ -1,6 +1,7 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
+draft: false
 title: Wallpaper Change On Timer w/ Feh and Crontab
+date: 2023-06-05
 ---
 
 # Change your wallpaper on a schedule with Feh and Crontab

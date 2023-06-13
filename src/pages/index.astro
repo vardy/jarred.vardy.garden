@@ -1,14 +1,9 @@
 ---
-import MasterLayout from '../layouts/MasterLayout.astro';
-
-const allBlogPosts = await Astro.glob('./writing/blog/*.md');
-allBlogPosts.sort((a, b) => { // Sort by date, descending
-	return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
-});
-
+import Button from '@components/Button.astro';
+import MasterLayout from '@layouts/MasterLayout.astro';
 ---
 
-<MasterLayout title="Home | Jarred Vardy">
+<MasterLayout title="Home | Jarred's Garden">
 	<h2>What's up</h2>
     <!--<p>This website is a bit of a playground and side-project 
     to play with Svelte, Astro, and CSS. The goal being to 
@@ -17,13 +12,15 @@ allBlogPosts.sort((a, b) => { // Sort by date, descending
     All too often projects get bloated, hard to read, and 
     dreadful to extend. I don't expect there to be anything 
     fit for consumption on here any time soon...</p>-->
-	
+
+    <Button>Test button</Button>
+
     <h2>Recent writings</h2>
 	<ul>
-		{allBlogPosts.map(post =>
+		<!--{allBlogPosts.map(post =>
 			<li>
 				<a href={post.url}>{new Date(post.frontmatter.date).toLocaleDateString("en-AU")} | {post.frontmatter.title}</a>
 			</li>
-		)}
+		)}-->
 	</ul>
 </MasterLayout>

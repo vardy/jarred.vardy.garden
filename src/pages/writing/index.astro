@@ -1,9 +1,18 @@
 ---
-import MasterLayout from "../../layouts/MasterLayout.astro";
+import MasterLayout from "@layouts/MasterLayout.astro";
+import { getCollection } from 'astro:content';
 
+const allNotes = await getCollection('notes');
 ---
 
-<MasterLayout title="Writing | Jarred Vardy">
-    <a href="/writing/blog">Blog</a><br>
-    <a href="/writing/notes">Notes</a>
+<MasterLayout title="Writing | Jarred's Garden">
+
+    <h2>Notes</h2>
+    <ul>
+        {
+            allNotes.map((note) => (
+                <li><a href={'/writing/' + note.slug}>{note.data.title}</a></li>
+            ))
+        }
+    </ul>
 </MasterLayout>

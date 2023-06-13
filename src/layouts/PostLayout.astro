@@ -1,14 +1,13 @@
 ---
-import MasterLayout from "./MasterLayout.astro";
+import MasterLayout from "@layouts/MasterLayout.astro";
 
 let { frontmatter } = Astro.props;
-const jv = " | Jarred Vardy"
-let title = frontmatter?.title ? frontmatter.title + jv  : "Blog Post" + jv
+let title = frontmatter.title + " | Jarred's Garden"
 ---
 
 <MasterLayout {title} >
     <div>
-        <a href="/writing/blog"><span>&larr; Blog Home</span></a>
+        <a href="/writing"><span>&larr; Writing</span></a>
     </div>
     <div class="writing-content">
         <slot />
