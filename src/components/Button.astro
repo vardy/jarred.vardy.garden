@@ -1,8 +1,8 @@
 ---
-let { link } = Astro.props;
+let { link, isHeaderButton } = Astro.props;
 ---
 
-<div class="btn">
+<div class:list={["btn", isHeaderButton && "btn-header"]}>
     <a href={link}>
         <slot></slot>
     </a>
@@ -15,5 +15,10 @@ let { link } = Astro.props;
         padding: 0.3rem 0.5rem;
         background-color: var(--accent-color);
         color: white;
+    }
+
+    .btn-header {
+        margin: 0 1rem 0.3rem 0rem;
+        padding: 0.3rem 0.5rem 0.3rem 0;
     }
 </style>

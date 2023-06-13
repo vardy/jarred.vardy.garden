@@ -4,14 +4,13 @@ import Button from "@components/Button.astro"
 ---
 
 <nav>
-    <img src="https://avatar.skype.com/v1/avatars/msjack2/public?size=l" alt="Profile picture" />
     <div id="text-section">
         <span id="name-heading">Jarred's Garden</span>
 
         <div id="header-nav-links">
-            <Button link="/">Home</Button>
-            <Button link="/writing">Writing</Button>
-            <Button link="/projects">Projects</Button>
+            <Button isHeaderButton link="/">Home</Button>
+            <Button isHeaderButton link="/writing">Writing</Button>
+            <Button isHeaderButton link="/projects">Projects</Button>
         </div>
     </div>
 </nav>
@@ -31,7 +30,6 @@ import Button from "@components/Button.astro"
     #text-section {
         display: flex;
         flex-direction: column;
-        margin-left: 1.5rem;
     }
 
     #name-heading { 
@@ -44,11 +42,5 @@ import Button from "@components/Button.astro"
         flex-direction: row;  
         flex-wrap: wrap;  
         margin: 0.5rem 0;
-    }
-
-    /* Todo: Targe this style correctly */
-    #header-nav-links .btn {
-        margin: 0 1rem 0.3rem 0rem;
-        padding: 0.3rem 0.5rem 0.3rem 0;
     }
 </style>
