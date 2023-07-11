@@ -7,16 +7,14 @@ const allNotes = await getCollection('notes');
 
 <MasterLayout title="Home | Jarred Vardy's Garden">
 
-    <p></p>
+    <p>This is a temporary holding space for a future project. Time will 
+    tell what will become of it.</p>
 
-    <h2>Recent writings</h2>
-	<ul>
-        {
-            allNotes.map((note) => (
-                <li><a href={'/writing/' + note.slug}>{note.data.title}</a></li>
-            ))
-        }
-	</ul>
+    <p>Find my Github here: <a href="https://github.com/vardy/">https://github.com/vardy/</a></p>
+
+    <p>You can email me  here:</p>
+    <img src="/imgs/email.svg">
+
 </MasterLayout>
 
 <style>
