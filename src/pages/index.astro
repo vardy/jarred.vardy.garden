@@ -1,26 +1,26 @@
 ---
-import Button from '@components/Button.astro';
 import MasterLayout from '@layouts/MasterLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allNotes = await getCollection('notes');
 ---
 
-<MasterLayout title="Home | Jarred's Garden">
-	<h2>What's up</h2>
-    <!--<p>This website is a bit of a playground and side-project 
-    to play with Svelte, Astro, and CSS. The goal being to 
-    make a no-bullshit, simple, fast, static site. Something 
-    that makes me want to add to it, expand, write, code. 
-    All too often projects get bloated, hard to read, and 
-    dreadful to extend. I don't expect there to be anything 
-    fit for consumption on here any time soon...</p>-->
+<MasterLayout title="Home | Jarred Vardy's Garden">
 
-    <Button>Test button</Button>
+    <p></p>
 
     <h2>Recent writings</h2>
 	<ul>
-		<!--{allBlogPosts.map(post =>
-			<li>
-				<a href={post.url}>{new Date(post.frontmatter.date).toLocaleDateString("en-AU")} | {post.frontmatter.title}</a>
-			</li>
-		)}-->
+        {
+            allNotes.map((note) => (
+                <li><a href={'/writing/' + note.slug}>{note.data.title}</a></li>
+            ))
+        }
 	</ul>
 </MasterLayout>
+
+<style>
+    li {
+        list-style: none;
+    }
+</style>

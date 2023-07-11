@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Wallpaper Change On Timer w/ Feh and Crontab
+title: Changing Wallpapers 
 date: 2023-06-05
 ---
 

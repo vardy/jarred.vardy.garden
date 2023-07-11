@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 const allNotes = await getCollection('notes');
 ---
 
-<MasterLayout title="Writing | Jarred's Garden">
+<MasterLayout title="Writing | Jarred Vardy's Garden">
 
     <h2>Notes</h2>
     <ul>
@@ -16,3 +16,9 @@ const allNotes = await getCollection('notes');
         }
     </ul>
 </MasterLayout>
+
+<style> 
+    li {
+        list-style: none;
+    }
+</style>

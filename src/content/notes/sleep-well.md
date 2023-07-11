@@ -6,7 +6,7 @@ date: 2023-06-05
 
 # Sleep notes
 
-I sleep: 2230 -> 0630
+Sleep: 2230 -> 0630
 
  - Sleep and wake at consistent times
  - Eat dinner earlier
@@ -17,5 +17,5 @@ I sleep: 2230 -> 0630
  - Do breath-work before sleep
  - Do regular cardio
  - Cut out caffeine within 6 hours of sleeping (1630)
- - Cut out THC or alcohol
+ - Cut out THC and alcohol
  - Look at sunlight for 5-10 minutes after waking up
